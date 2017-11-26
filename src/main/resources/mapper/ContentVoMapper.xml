@@ -93,7 +93,7 @@
     </if>
     <include refid="Base_Column_List" />
     ,
-    <include refid="Blob_Column_List" />
+    left(content,200) as content
     from t_contents
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
