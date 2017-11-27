@@ -37,7 +37,7 @@ public class LogServiceImpl implements ILogService {
         logs.setData(data);
         logs.setIp(ip);
         logs.setAuthorId(authorId);
-        logs.setCreated(DateKit.getCurrentUnixTime());
+        logs.setCreated(DateKit.getNow());
         logDao.insert(logs);
     }
 

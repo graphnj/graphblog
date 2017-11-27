@@ -1,6 +1,7 @@
 package com.zjh.project.graphblog.modal.Vo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author 
@@ -34,7 +35,7 @@ public class LogVo implements Serializable {
     /**
      * 日志创建时间
      */
-    private Integer created;
+    private Date created;
 
 
 
@@ -80,11 +81,11 @@ public class LogVo implements Serializable {
         this.ip = ip;
     }
 
-    public Integer getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(Integer created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 }
