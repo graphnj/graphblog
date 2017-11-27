@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">最新文章</h4>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">最新留言</h4>
@@ -95,7 +95,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">系统日志</h4>
@@ -103,7 +105,7 @@
                                 <div class="panel-body">
                                     <ul class="list-group" >
                                         <li class="list-group-item" th:each="log : ${logs}">
-                                            <span th:text="${commons.fmtdate(log.created, 'yyyy-MM-dd HH:mm:ss')} +' => '+ ${log.ip}+' '+${log.action}+' '+${log.data}"></span>
+                                            <span th:text="'('+${log.id}+')  '+${log.created} +' :=> '+ ${log.ip}+' '+${log.action}+' '+${log.data}"></span>
                                         </li>
                                     </ul>
                                 </div>
