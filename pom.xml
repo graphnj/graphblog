@@ -183,6 +183,25 @@
                     </configuration>
                 </plugin>
             </plugins>
+
+            <resources>
+                <resource>
+                    <filtering>true</filtering>
+                    <directory>src/main/resources</directory>
+                    <excludes>
+                        <exclude>application-dev.properties</exclude>
+                        <exclude>application-prod.properties</exclude>
+                    </excludes>
+                </resource>
+                <resource>
+                    <filtering>false</filtering>
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>application-${profileActive}.properties</include>
+                    </includes>
+                </resource>
+            </resources>
+
         </build>
 
 
