@@ -197,7 +197,7 @@
                     <filtering>false</filtering>
                     <directory>src/main/resources</directory>
                     <includes>
-                        <include>application-${profileActive}.properties</include>
+                        <include>application-prod.properties</include>
                     </includes>
                 </resource>
             </resources>
